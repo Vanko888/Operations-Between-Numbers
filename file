@@ -1,0 +1,76 @@
+using System;
+
+namespace DayOfWeek
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double N1 = double.Parse(Console.ReadLine());
+            double N2 = double.Parse(Console.ReadLine());
+            string symbol = Console.ReadLine();
+            string evenodd = "";
+                switch (symbol)
+            {
+                case "-":
+                    if ((N1 - N2) % 2 == 0)
+                    {
+                        evenodd = "even";
+                        Console.WriteLine($"{N1} - {N2} = {N1 - N2} - {evenodd}");
+                    }
+                    else
+                    {
+                        evenodd = "odd";
+                        Console.WriteLine($"{N1} - {N2} = {N1 - N2} - {evenodd}");
+                    }
+                        break;
+                case "+":
+                    if ((N1 + N2) % 2 == 0)
+                    {
+                        evenodd = "even";
+                        Console.WriteLine($"{N1} + {N2} = {N1 + N2} - {evenodd}");
+                    }
+                    else
+                    {
+                        evenodd = "odd";
+                        Console.WriteLine($"{N1} + {N2} = {N1 + N2} - {evenodd}");
+                    }
+                    break;
+                case "*":
+                    if ((N1 * N2) % 2 == 0)
+                    {
+                        evenodd = "even";
+                        Console.WriteLine($"{N1} * {N2} = {N1 * N2} - {evenodd}");
+                    }
+                    else
+                    {
+                        evenodd = "odd";
+                        Console.WriteLine($"{N1} * {N2} = {N1 * N2} - {evenodd}");
+                    }
+                    break;
+                case "/":
+                    if (N2 == 0)
+                    {
+                        Console.WriteLine($"Cannot divide { N1} by zero");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{N1} / {N2} = {N1 / N2:F2}");
+                    }
+                    break;
+                case "%":
+                    if (N2 == 0)
+                    {
+                        Console.WriteLine($"Cannot divide { N1} by zero");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{N1} % {N2} = {N1 % N2}");
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+}
